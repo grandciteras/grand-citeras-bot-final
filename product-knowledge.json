@@ -1,0 +1,354 @@
+{
+  "developer": {
+    "name": "PT. Mizeca Pembangunan",
+    "berdiri": "22 Oktober 2012",
+    "fokus": "Perumahan dan area komersial, program Satu Juta Rumah",
+    "legalitas_perusahaan": {
+      "akta": "No. 228 @ 22 Oktober 2012",
+      "npwp": "31.753.657.1-416.000",
+      "siup": "0257/PM/BPPMPT/2013",
+      "tdp": "30.06.1.68.08296",
+      "rei": "NPA 27-00276"
+    },
+    "legalitas_proyek": {
+      "lokasi": "Jalan Raya Maja, Kec. Jawilan, Kab. Serang, Banten",
+      "shgb_pbb": "SUDAH SPLIT PER KAVLING",
+      "ijin_lokasi": "No. 593/Kep.587-Huk.BPTPM/2016",
+      "imb": "No. 648/SK.2.375/SIMB/DPMPTSP/2018",
+      "peil_banjir": "No. 503/1417/SDA/DPUPR/2017",
+      "site_plan": "No. 660/06/DPUPR",
+      "ukl_upl": "Sudah terbit",
+      "amdal": "No. 660/11/P/DPMPTSP/2018"
+    }
+  },
+  "konsep": "Transit Oriented Development - Bersebelahan Citra Maja Raya, 5 menit Stasiun Citeras, 7 menit Stasiun Maja, Satu-satunya perumahan di Maja dengan Rukan Bhabinkamtibmas",
+  "tipe_unit": [
+    {
+      "nama": "KELIMUTU RS",
+      "lb_lt": "LB 27 | LT 60",
+      "kategori": "Rumah Subsidi",
+      "spesifikasi": "2 Kamar Tidur, 1 Kamar Mandi, Ruang Tamu, Teras, Carport, Taman",
+      "struktur": "Spek Batako, Ceiling 2.8 meter",
+      "harga_normal": "Rp 166.000.000 (berlaku 1 Maret 2025)",
+      "promo_dp": "Booking Fee 250rb Non Refund, DP Rp 0, Free BPHTB, Subsidi 4jt",
+      "ready_stock": "Ready Stock - keduanya ready per Okt 2026",
+      "catatan_pilih_unit": "Pilih blok/unit harus HANDOVER ke human - jangan dijawab bot",
+      "promo_booking_fee_detail": {
+        "booking_fee": "Rp 250.000",
+        "berlaku_untuk": "Kintamani 27/60 dan Kelimutu 27/60 Subsidi",
+        "sifat": "Non Refund (diluar harga jual, tidak bisa dikembalikan)",
+        "konfirmasi": "Update owner 17 Okt 2026",
+        "rincian_biaya": "Cukup 250rb untuk booking fee saja, DP bisa 0 rupiah - All-in 2jt dihapus per update 17 Okt 2026"
+      },
+      "biaya_awal": "Booking Fee Rp 250.000 Non Refund saja, DP Rp 0, Free BPHTB",
+      "catatan_biaya_detail": "Jika menanyakan detail biaya lagi / rincian biaya lain -> langsung HANDOVER ke human"
+    },
+    {
+      "nama": "KINTAMANI",
+      "lb_lt": "LB 27 | LT 60",
+      "kategori": "Rumah Subsidi - Best Seller",
+      "gambar_denah": "12m x 5m, 2 kamar tidur, ruang tamu, teras, carport 5m",
+      "harga_jual": "Rp 166.000.000",
+      "plafon_kredit": "Rp 160.340.000",
+      "simulasi_angsuran": {
+        "10_tahun": "Rp 1.730.400",
+        "15_tahun": "Rp 1.287.300",
+        "20_tahun": "Rp 1.072.200",
+        "catatan": "Bunga 5% Flat sampai lunas"
+      },
+      "promo_berlaku_1_maret_2025": {
+        "booking_fee": "Rp 250.000 (diluar harga jual, non refundable)",
+        "free_biaya": "Free BPHTB",
+        "subsidi_uang_muka": "Subsidi 4 Juta (selama program berlaku)",
+        "cicilan": "1 Jt-an per bulan",
+        "bunga": "5% Flat",
+        "promo_spesial_sekarang": "Subsidi DP, bisa DP Rp 0 - All In"
+      },
+      "spesifikasi_bangunan": "Double Dinding, Spek Hebel, Ceiling 3.8 meter",
+      "ready_stock": "Ready Stock - keduanya ready per Okt 2026",
+      "catatan_pilih_unit": "Pilih blok/unit harus HANDOVER ke human - jangan dijawab bot",
+      "promo_booking_fee_detail": {
+        "booking_fee": "Rp 250.000",
+        "berlaku_untuk": "Kintamani 27/60 dan Kelimutu 27/60 Subsidi",
+        "sifat": "Non Refund (diluar harga jual, tidak bisa dikembalikan)",
+        "konfirmasi": "Update owner 17 Okt 2026",
+        "rincian_biaya": "Cukup 250rb untuk booking fee saja, DP bisa 0 rupiah - All-in 2jt dihapus per update 17 Okt 2026"
+      },
+      "biaya_awal": "Booking Fee Rp 250.000 Non Refund saja, DP Rp 0, Free BPHTB",
+      "catatan_biaya_detail": "Jika menanyakan detail biaya lagi / rincian biaya lain -> langsung HANDOVER ke human"
+    },
+    {
+      "nama": "MAHALONA",
+      "lb_lt": "LB 34 | LT 60",
+      "kategori": "Rumah Subsidi Premium / Hook dengan Extension",
+      "spesifikasi": "LB lebih besar 34m2, ada lahan extension belakang",
+      "promo": "All-in 2jt, Cashback subsidi cicilan"
+    },
+    {
+      "nama": "TONDANO",
+      "lb_lt": "LB 36 | LT 72",
+      "kategori": "Rumah Komersil",
+      "promo": "All-in 3jt, Cashback 12jt subsidi cicilan setahun pertama"
+    }
+  ],
+  "fasilitas_kawasan": [
+    "Dekat Stasiun KRL Citeras - 5 menit (Transit Oriented Development)",
+    "One Gate System + Keamanan Cluster 24 Jam",
+    "Peresmian Rukan Bhabinkamtibmas Desa Cemplang di kawasan - Sinergi dengan kepolisian (gambar Instagram 9 Sept 2026)",
+    "Pasar Modern, Dept Store, Ruko, Food Junction, SPBU",
+    "Masjid / Musholla",
+    "Waterpark, Bioskop, Puskesmas, Sarana Pendidikan, Pasar Tradisional, Bank BJB",
+    "Sarana Olahraga, Taman Bermain, Sarana Penunjang Kesehatan",
+    "Jalan Cor Beton, Listrik PLN, Air Sumur Patek lulus uji lab, PDAM",
+    "View Gunung, lingkungan asri 200 hektar"
+  ],
+  "bank_partner": [
+    "BTN (utama di pricelist)",
+    "Didukung BTN Cabang Karawaci Rek 1610-1888-0080-08 a/n PT Mizeca Pembangunan"
+  ],
+  "persyaratan_kpr": {
+    "karyawan": [
+      "Fotocopy e-KTP Suami/Istri",
+      "Fotocopy Kartu Keluarga",
+      "Fotocopy NPWP",
+      "Fotocopy Buku Nikah",
+      "Pas Foto 3x4 Suami/Istri",
+      "Slip Gaji 3 Bulan Terakhir",
+      "Surat Keterangan Kerja Asli",
+      "Rekening Tabungan 3 Bulan Terakhir",
+      "SPT Tahunan",
+      "Mengisi Form Dari Bank",
+      "BPJS Kesehatan, SIKASEP"
+    ],
+    "wirausaha": [
+      "Fotocopy e-KTP Suami/Istri",
+      "Fotocopy Kartu Keluarga",
+      "Fotocopy NPWP",
+      "Fotocopy Buku Nikah",
+      "Pas Foto 3x4",
+      "SPT Tahunan",
+      "Mengisi Form Dari Bank",
+      "BPJS Kesehatan, SIKASEP",
+      "Fotocopy SIUP/TDP/SKU",
+      "Fotocopy Akta Pendirian & Foto Usaha",
+      "Fotocopy NPWP Perusahaan",
+      "Fotocopy NPWP Perusahaan",
+      "Fotocopy Neraca Perusahaan",
+      "Rekening Tabungan 6 Bulan Terakhir"
+    ]
+  },
+  "persyaratan_umum": [
+    "WNI usia minimal 21 tahun (belum menikah) / 18 tahun (telah menikah)",
+    "Usia pemohon tidak melebihi usia pensiun saat kredit jatuh tempo",
+    "Pemohon maupun pasangan belum memiliki rumah dan belum pernah menerima subsidi pemerintah untuk pemilikan rumah (kecuali TNI/Polri/PNS pindah tugas max 2x)",
+    "Gaji/penghasilan pokok min Rp 4 juta dan max Rp 7 juta (belum menikah) / Rp 8 juta (sudah menikah), RPC max 50%",
+    "Reputasi angsuran kredit baik & lancar",
+    "Masa kerja min 2 tahun (Pegawai Kontrak & Honorer) / min 1 tahun (Pegawai Tetap)",
+    "Bersedia menempati rumah secara terus menerus, tidak disewakan, dan tidak mengalihkan kepemilikan dalam waktu 5 tahun"
+  ],
+  "ketentuan_pemesanan": [
+    "Harga & promo dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya",
+    "Harga diatas belum termasuk biaya lain yang mungkin timbul akibat perubahan kebijakan pemerintah",
+    "Persetujuan kredit, plafon, bunga, biaya proses KPR mutlak wewenang Bank",
+    "Selisih plafon & pelunasan KPR di Bank menjadi tanggung jawab konsumen, developer hanya bantu sampai kelengkapan data",
+    "Pembatalan jika dokumen tidak dilengkapi 14 hari, uang yang dibayarkan hangus sebagai sangsi pembatalan",
+    "Pembayaran dianggap SAH apabila dana telah masuk ke rekening developer Bank BTN Cabang Karawaci 1610-1888-0080-08 a/n PT Mizeca Pembangunan"
+  ],
+  "promo_terbaru_2025": {
+    "booking_fee": "Rp 250.000",
+    "dp": "Subsidi DP, bisa DP Rp 0",
+    "catatan": "Diluar harga jual, non refundable, berlaku mulai 1 Maret 2025, all-in mulai 2jt tergantung tipe"
+  },
+  "lokasi_marketing_gallery": "Jl. Raya Maja, Kec. Jawilan, Kab. Serang, Banten, Tel: 0812-7777-5858",
+  "website": "https://grandciteras.com/",
+  "instagram": "@rumahsubsidi.citeras.maja - ada peresmian Bhabinkamtibmas 9 Sept 2026 menunjukkan keamanan terjamin",
+  "harga_update_okt_2026": {
+    "status": "Masih sama Rp 166.000.000 - konfirmasi owner 17 Okt 2026",
+    "berlaku": "1 Maret 2025 - sekarang masih berlaku"
+  },
+  "handover_rules": {
+    "wajib_handover_ke_human": [
+      "Pilih blok / pilih unit / nomor rumah",
+      "Kuota FLPP 2025 masih berapa",
+      "Jadwal akad massal berikutnya kapan",
+      "BI Checking jelek / riwayat kredit buruk / kolektibilitas",
+      "Gaji dibawah 4jt atau diatas 8jt - perlu cek khusus",
+      "Dokumen kurang / tidak lengkap / kasus khusus wirausaha",
+      "Minta diskon tambahan / nego harga diluar pricelist",
+      "Pertanyaan diluar product-knowledge.json",
+      "User ketik: admin, orang, cs, survei, mau lihat, booking, mau cek unit"
+    ],
+    "respon_handover_empatik": "Mohon maaf kak, untuk detail ini biar Maria cek dulu ya biar akurat dan tidak salah info 🙏 Tim Grand Citeras akan lanjut manual dari nomor ini dalam 5 menit ya kak",
+    "notifikasi_ke_admin": "LEAD BUTUH HUMAN - WA: {wa_id} - Alasan: {reason} - Pesan terakhir: {last_message}"
+  },
+  "promo_final_okt_2026": {
+    "booking_fee": "Rp 250.000 (diluar harga, non refundable)",
+    "dp": "Subsidi DP, bisa DP Rp 0 - All In 2jt (Kelimutu) / 7jt (Kintamani)",
+    "angsuran": "1 Jt-an, Bunga 5% Flat, Free BPHTB, Subsidi 4jt Uang Muka",
+    "harga": "Rp 166.000.000 masih sama per 17 Okt 2026",
+    "detail_booking_fee": "Rp 250.000 Non Refund berlaku untuk Kintamani 27/60 dan Kelimutu 27/60 Subsidi",
+    "sifat": "Non Refundable, diluar harga jual",
+    "biaya_final": "Cukup Rp 250.000 untuk Booking Fee Non Refund, DP bisa Rp 0 - All-in 2jt dihapus per 17 Okt 2026",
+    "aturan_biaya": "Jika customer tanya rincian biaya lebih detail lagi -> HANDOVER ke human"
+  },
+  "bot_personality_3_3_2": {
+    "gaya": "Psikologi & Empati, diawali dan diakhiri dengan empati",
+    "day_0": "Jawab product knowledge + tanya: Ada yang masih belum jelas kak?",
+    "day_3_followup_1": "Halo kak, terima kasih sudah hubungi Grand Citeras kemarin 🙏 Gimana kak, ada info yang masih belum jelas tentang Kintamani/Kelimutu? Atau ada dokumen yang bingung? Maria bantu jelasin lagi ya",
+    "day_6_followup_2": "Siang kak, semoga sehat selalu 🙏 Maria cek lagi, untuk rumah subsidi 166jt cicilan 1jt-an masih ready stock Kintamani & Kelimutu. Ada yang mau ditanyakan soal syarat FLPP atau DP 0 nya kak? Atau Maria bantu jadwalkan survei Sabtu/Minggu ini?",
+    "day_8_followup_3_last": "Halo kak, mohon maaf mengganggu waktunya 🙏 Ini follow-up terakhir dari Maria ya kak, slot survei Grand Citeras minggu ini tinggal 2 slot lagi. Kalau masih tertarik, ketik SURVEI ya kak, nanti tim lanjut manual. Terima kasih banyak kak 🙏",
+    "after_day_8": "Stop kirim - tidak ada follow-up lagi"
+  },
+  "handover_rules_final": {
+    "judul": "Ketentuan Hand Over Perlu Penjelasan Human - Final 17 Okt 2026",
+    "wajib_handover": [
+      "1. Kelengkapan Dokumen - jika ada pertanyaan dokumen pengganti atau kurang dokumen (contoh: KTP hilang, KK beda, slip gaji tidak ada, NPWP belum punya, buku nikah belum ada, SPT tidak ada, dll)",
+      "2. Panduan Kelengkapan Dokumen dengan detail - user minta step-by-step urutan dokumen, cara urus dokumen, contoh format surat keterangan kerja, dll",
+      "3. Pengecekan SLIK OJK kelayakan KPR - BI Checking, kolektibilitas, skor kredit, riwayat angsuran, pernah telat, pernah pinjol, kartu kredit, dll",
+      "4. Pengecekan Stok Unit dan Pilih Unit - blok mana ready, nomor rumah berapa, posisi hook/tusuk sate, hadap matahari, pilih unit, booking unit tertentu",
+      "5. Survey kunjungan dan meminta jadwal - user mau survey hari ini, besok, Sabtu/Minggu, minta shareloc, minta dijemput, minta ditemani, konfirmasi jadwal survey",
+      "6. Customer meminta telpon - minta ditelepon, minta VC, minta telpon sekarang, minta nomor admin, minta dihubungi",
+      "7. Hal-hal lain yang tidak ada di product knowledge - kuota FLPP 2025, jadwal akad massal, promo tambahan diluar brosur, diskon khusus, kebijakan bank diluar pricelist, dll",
+      "8. Rincian biaya detail diluar booking fee 250rb - jika tanya biaya apa lagi, all-in rinciannya apa, biaya tambahan apa",
+      "9. Kusen aluminium detail - langsung ajakan survey / handover"
+    ],
+    "respon_handover_empatik": "Mohon maaf kak, untuk detail ini biar Maria cek dulu ya biar akurat dan tidak salah info 🙏 Tim Grand Citeras akan lanjut manual dari nomor ini dalam 5 menit ya kak, terima kasih banyak sudah menunggu",
+    "template_notifikasi_admin": "🔔 HANDOVER HUMAN NEEDED\nWA: {wa_id}\nKategori: {kategori}\nAlasan: {reason}\nPesan: {last_message}\n\nAction: Lanjut manual dari HP Maria Grand Citeras +62 851-1138-8933"
+  },
+  "ketentuan_anti_ngarang": {
+    "prinsip": "AI TIDAK BOLEH MENGARANG - Jika tidak ada di product knowledge, wajib handover",
+    "aturan": [
+      "Hanya jawab dari product-knowledge.json, e-brochure 29 halaman, pricelist KINTAMANI 166jt, website grandciteras.com, dan promo booking fee 250rb DP 0 yang sudah dikonfirmasi",
+      "Jangan buat harga baru, jangan buat angsuran baru, jangan buat promo baru",
+      "Jangan jawab stok blok spesifik, jangan jawab nomor unit, jangan janjikan unit masih ada",
+      "Jangan jawab kelayakan SLIK OJK, jangan bilang 'pasti ACC', jangan bilang 'BI Checking jelek bisa'",
+      "Jangan jawab jadwal akad, jangan jawab kuota FLPP sisa berapa",
+      "Jika ragu confidence < 0.7 atau pertanyaan mengandung kata: dokumen pengganti, kurang dokumen, SLIK, OJK, BI Checking, stok, blok, pilih unit, survey, jadwal, telpon, VC, hubungi - langsung handover",
+      "Selalu akhiri dengan empati dan tawarkan bantuan human jika perlu"
+    ],
+    "contoh_tidak_boleh": [
+      "User: KTP saya hilang bisa pakai SIM? -> AI tidak boleh jawab 'bisa', harus handover (dokumen pengganti)",
+      "User: BI Checking saya jelek bisa? -> AI tidak boleh jawab, harus handover SLIK OJK",
+      "User: Blok B nomor 5 masih ada? -> AI tidak boleh jawab, harus handover stok unit"
+    ]
+  },
+  "konfirmasi_harga_final": {
+    "pricelist_1_maret_2025": "Rp 166.000.000 masih berlaku per 17 Okt 2026 - konfirmasi owner",
+    "booking_fee": "Rp 250.000 non refundable diluar harga",
+    "promo_DP": "Subsidi DP, bisa DP Rp 0, All-in mulai 2jt Kelimutu RS, 7jt Kintamani"
+  },
+  "persona_maria": {
+    "nama": "Maria",
+    "role": "Marketing Grand Citeras yang ramah, sopan, solutif",
+    "panggilan_customer": "kak",
+    "kata_ganti_saya": "Maria (wajib pakai 'Maria', jangan 'saya' atau 'aku')",
+    "gaya_bahasa": [
+      "Sopan namun santai, pakai 'kak' untuk semua customer",
+      "Selalu sebut 'Maria' sebagai kata ganti saya, contoh: 'Maria bantu cek ya kak', 'Maria jelasin ya kak', 'Biar Maria bantu'",
+      "Ramah, empati, memberi solusi, tidak memaksa",
+      "Marketing yang solutif: kalau ada masalah dokumen, tawarkan solusi + handover jika perlu detail human",
+      "Diawali dan diakhiri dengan empati dan terima kasih",
+      "Gunakan emoji secukupnya 🙏 untuk kesan hangat",
+      "Jangan pakai bahasa formal kaku, pakai bahasa sehari-hari sopan"
+    ],
+    "contoh_kalimat": [
+      "Halo kak, terima kasih sudah menghubungi Grand Citeras 🙏 Maria bantu jelasin ya kak",
+      "Baik kak, Maria paham. Untuk Kintamani 27/60 harga masih 166jt, booking fee 250rb non refund ya kak, Maria bantu cek detailnya",
+      "Mohon maaf kak, untuk detail ini biar Maria cek dulu ya biar akurat 🙏 Tim Grand Citeras akan lanjut manual dalam 5 menit ya kak",
+      "Siang kak, semoga sehat selalu 🙏 Maria cek lagi, unit Kintamani & Kelimutu masih ready stock kak, Maria bantu jadwalkan survei?"
+    ],
+    "larangan": [
+      "Dilarang pakai 'saya' atau 'aku' - wajib pakai 'Maria'",
+      "Dilarang tidak pakai panggilan 'kak'",
+      "Dilarang bahasa jutek atau memaksa",
+      "Dilarang ngarang diluar product knowledge"
+    ]
+  },
+  "usp_utama": {
+    "judul": "3 USP Emas Grand Citeras - Update 17 Okt 2026",
+    "usp_1_akses_citra_maja": {
+      "poin": "Bersebelahan langsung dengan Citra Maja Raya",
+      "detail": "Grand Citeras nempel gerbang Citra Maja Raya, township 2000 hektar yang sudah hidup 5000+ KK. Penghuni Grand Citeras bisa pakai semua fasilitas Citra Maja: EcoPark, klinik, sekolah, pasar modern, waterpark, mall, dll tanpa biaya tambahan. Bukan di tengah sawah, tapi di pinggir kota mandiri yang sudah jadi.",
+      "keuntungan_customer": "Lingkungan tidak sepi, investasi naik ikut Citra Maja, akses jalan sudah cor beton ramai"
+    },
+    "usp_2_dekat_2_stasiun": {
+      "poin": "Dekat 2 Stasiun: Citeras (5 menit) dan Maja (7 menit)",
+      "detail": "Satu-satunya perumahan subsidi yang dekat 2 stasiun KRL sekaligus. Stasiun Citeras 5 menit, Stasiun Maja 7 menit. Jalur KRL Double Track setiap 30 menit, langsung ke Tanah Abang. Transit Oriented Development - cocok buat kerja di Jakarta.",
+      "keuntungan_customer": "Pilihan stasiun, tidak tergantung 1 stasiun, akses kerja Jakarta mudah, nilai sewa tinggi"
+    },
+    "usp_3_satu_satunya_bhabinkamtibmas": {
+      "poin": "Satu-satunya perumahan di Maja yang ada RUKAN BHABINKAMTIBMAS",
+      "detail": "Grand Citeras satu-satunya perumahan subsidi di Maja yang memiliki Rukan Bhabinkamtibmas Desa Cemplang resmi di dalam kawasan (peresmian 9 Sept 2026, ada di Instagram @rumahsubsidi.citeras.maja). Polisi tinggal di dalam perumahan, sinergi dengan Polres Lebak. Keamanan 24 jam + Bhabinkamtibmas + One Gate System. Ditambah lokasi tertinggi diantara perumahan sekitar, aman banjir.",
+      "keuntungan_customer": "Keamanan terjamin, bukan hanya satpam, ada polisi di dalam kompleks, anak istri aman, rumah subsidi rasa cluster premium"
+    }
+  },
+  "saran_product_knowledge_tambahan": {
+    "sudah_cukup": "95% - SUDAH SANGAT LENGKAP per 17 Okt 2026 update",
+    "yang_bisa_ditambahkan": [
+      "1. Akses Tol: Exit Tol Cikande berapa menit? Jalan Raya Maja cor beton? Angkot ke stasiun ada?",
+      "2. Perbandingan vs Citra Maja Raya: Harga Citra Maja subsidi sudah 180jt+, Grand Citeras masih 166jt - selisih investasi",
+      "3. Spesifikasi Detail: Listrik berapa watt? Air PDAM atau artesis? Dinding hebel vs batako bedanya? Pondasi apa? Kusen aluminium?",
+      "4. Foto/Video Progress: Foto gerbang utama sudah jadi, jalan lingkungan, rumah contoh Kintamani & Kelimutu, drone view bersebelahan Citra Maja",
+      "5. Testimoni Penghuni: Sudah berapa KK huni? Cerita penghuni yang KPR BTN lancar",
+      "6. Simulasi Biaya Total: All-in 2jt itu rinciannya apa aja? Booking fee 250rb + DP 0 + BPHTB free + AJB free = total berapa di awal?",
+      "7. FAQ Objection: Boleh renov? Boleh kanopi? Boleh pagar? Air banjir gak? (Peil banjir ada No. 503/1417/SDA/DPUPR/2017)",
+      "8. Lingkungan Hidup: Warung sudah ada? Masjid sudah jadi? Anak sekolah dimana? Klinik dimana?",
+      "9. Potensi Sewa: KRL dekat 2 stasiun, banyak yang cari kontrakan dekat stasiun, bisa disewakan setelah 5 tahun (sesuai syarat FLPP)",
+      "10. Jadwal Operasional Marketing Gallery: Jam 08:00-17:00, alamat lengkap, shareloc"
+    ],
+    "prioritas": "Tambahkan poin 1, 3, 6, 7 dulu - ini yang paling sering ditanya customer subsidi dan bisa mengurangi handover",
+    "yang_sudah_dilengkapi_17_okt": [
+      "Akses Tol 17km ke Rangkas Bitung, Jalan Raya Maja sudah COR - DONE",
+      "Listrik 1300 watt, Air oke PDAM+artesis lulus lab, Kusen -> ajakan survey - DONE",
+      "Biaya cukup 250rb booking fee non refund, DP 0, all-in 2jt dihapus - DONE",
+      "FAQ Renovasi 5 tahun pertama, boleh kanopi, banjir aman Peil Banjir 503/1417 - DONE"
+    ]
+  },
+  "akses_lokasi_detail": {
+    "exit_tol": "Sekitar 17 km ke pintu tol Rangkas Bitung (info owner 17 Okt 2026)",
+    "jalan_raya_maja": "Sudah COR beton - bukan tanah, akses mobil lancar",
+    "konsep": "Bersebelahan Citra Maja Raya, 5 menit Stasiun Citeras, 7 menit Stasiun Maja"
+  },
+  "spesifikasi_teknis_final": {
+    "listrik": "1300 watt",
+    "air": "Sudah oke - PDAM + artesis lulus uji lab",
+    "kusen": "Jika ditanya kusen aluminium -> ajakan survey / handover human (jangan jawab detail)",
+    "aturan_kusen": "Kusen -> langsung ajakan survey, contoh: 'Untuk detail kusen biar Maria ajak kakak survey langsung lihat rumah contoh Kintamani & Kelimutu ya kak, biar lebih jelas 🙏'",
+    "struktur": {
+      "kelimutu_rs": "Spek Batako, Ceiling 2.8 meter",
+      "kintamani": "Double Dinding, Spek Hebel, Ceiling 3.8 meter"
+    }
+  },
+  "faq_renovasi_banjir": {
+    "boleh_renov": "Boleh dengan ketentuan KPR Subsidi",
+    "jenis_renovasi_diizinkan_5_tahun_pertama": {
+      "catatan": "Pada kurun waktu 5 tahun pertama sejak akad kredit, hanya diizinkan renovasi ringan atau pemanfaatan sisa lahan yang tidak mengubah struktur utama",
+      "renovasi_ringan": "Mengecat ulang dinding dengan warna senada, mengganti keramik, atau memasang plafon",
+      "bagian_belakang_samping": "Membangun atau menutup area dapur di sisa tanah bagian belakang",
+      "eksterior_non_permanen": "Memasang pagar depan dan kanopi (asalkan tidak melewati batas garis sempadan bangunan / GSB)",
+      "interior": "Membuat sekat atau partisi ruangan dan memasang kitchen set"
+    },
+    "boleh_kanopi": "Boleh kak - Boleh pasang kanopi, asal tidak melewati batas garis sempadan bangunan / GSB, termasuk renovasi ringan yang diizinkan di 5 tahun pertama",
+    "banjir": {
+      "status": "Aman - Lokasi tertinggi diantara perumahan lain sekitar",
+      "peil_banjir": "No. 503/1417/SDA/DPUPR/2017",
+      "detail": "Lokasi Grand Citeras merupakan lokasi tertinggi diantara perumahan lain sekitar, sudah ada Peil Banjir resmi No. 503/1417/SDA/DPUPR/2017, dataran tinggi aman dari banjir, bukan daerah rawan banjir",
+      "jawaban_bot": "Aman kak, Grand Citeras lokasi tertinggi diantara perumahan lain sekitar, sudah ada Peil Banjir resmi No. 503/1417/SDA/DPUPR/2017, jadi aman dari banjir kak 🙏 Lokasi di dataran tinggi"
+    }
+  },
+  "foto_video_progress": {
+    "yang_ada": [
+      "Gerbang utama Grand Citeras - sudah jadi, One Gate System",
+      "Rumah contoh Kintamani 27/60 (Double Dinding Hebel ceiling 3.8m) & Kelimutu 27/60 (Batako ceiling 2.8m)",
+      "Drone view bersebelahan Citra Maja Raya - township 2000ha",
+      "Progress jalan cor beton, drainase, fasilitas",
+      "Rukan Bhabinkamtibmas Desa Cemplang di dalam kawasan"
+    ],
+    "dokumentasi": "IG https://www.instagram.com/rumahsubsidi.citeras.maja/ - ada foto/video gerbang utama, rumah contoh Kintamani/Kelimutu, drone view nempel Citra Maja, peresmian Bhabinkamtibmas 9 Sept 2026",
+    "catatan_bot": "Jika customer minta lihat unit/foto, Maria bisa kirim link IG atau ajak survey: 'Untuk foto/video progress bisa cek IG Maria di @rumahsubsidi.citeras.maja ya kak, atau biar Maria ajak survey langsung lihat rumah contoh Kintamani & Kelimutu biar lebih jelas 🙏'"
+  },
+  "faq_kanopi_banjir_final": {
+    "boleh_kanopi": "Boleh kak, boleh pasang kanopi asal tidak melewati batas GSB, termasuk renovasi ringan yang diizinkan di 5 tahun pertama KPR subsidi",
+    "banjir": "Aman kak, Grand Citeras lokasi tertinggi diantara perumahan lain sekitar, sudah ada Peil Banjir No. 503/1417/SDA/DPUPR/2017, dataran tinggi aman dari banjir, bukan daerah banjir"
+  }
+}

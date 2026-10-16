@@ -1,0 +1,15 @@
+{
+  "name": "grand-citeras-coexistence-bot-final",
+  "version": "1.0.0-final-17okt2026",
+  "description": "Grand Citeras WA Coexistence Bot - Maria persona kak, product knowledge 100%, drip 3-3-2, handover 9 ketentuan, kanopi boleh, banjir lokasi tertinggi, IG docs",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.7.2",
+    "node-cron": "^3.0.3"
+  }
+}
