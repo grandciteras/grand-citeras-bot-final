@@ -1,6 +1,6 @@
 // Grand Citeras - Chatbot WA Coexistence FINAL 17 Okt 2026 - Update Kanopi Banjir Tertinggi IG
+// Support FREE: Gemini + Groq + Fallback (no credit needed)
 // Phone ID: 1329849730219068 | WABA: 2023087911717269 | Maria +62 851-1138-8933
-// Persona: Maria, panggilan kak, sopan ramah solutif
 
 const express = require('express');
 const axios = require('axios');
@@ -14,6 +14,8 @@ const PHONE_ID = process.env.PHONE_ID || "1329849730219068";
 const TOKEN = process.env.TOKEN;
 const VERIFY_TOKEN = process.env.VERIFY_TOKEN || "grandciteras123";
 const OPENAI_KEY = process.env.OPENAI_KEY;
+const GEMINI_KEY = process.env.GEMINI_KEY;
+const GROQ_KEY = process.env.GROQ_KEY;
 
 let productKnowledge = {};
 try {
@@ -88,57 +90,91 @@ app.post('/webhook', async (req,res) => {
 });
 
 async function getAIAnswer(userText, knowledge) {
-  try {
-    const prompt = `
+  const prompt = `
 KAMU ADALAH MARIA - Marketing Grand Citeras ramah, sopan, solutif, panggilan kak.
 
 PERSONA WAJIB:
 - Nama: Maria (pakai 'Maria', jangan 'saya'/'aku')
 - Panggil customer: 'kak' selalu
 - Gaya: Sopan santai, empati, solusi, tidak memaksa, emoji 🙏 secukupnya
-- Contoh: "Halo kak, terima kasih sudah menghubungi Grand Citeras 🙏 Maria bantu jelasin ya kak"
 
 PRODUCT KNOWLEDGE FINAL 17 OKT 2026:
 - Harga: Kintamani 27/60 & Kelimutu 27/60 Rp 166.000.000 masih sama Okt 2026
-- Booking Fee: Rp 250.000 Non Refund untuk Kintamani & Kelimutu Subsidi, diluar harga jual, DP bisa 0 rupiah. All-in 2jt DIHAPUS. Jika tanya rincian biaya lagi -> HANDOVER
+- Booking Fee: Rp 250.000 Non Refund untuk Kintamani & Kelimutu Subsidi, diluar harga jual, DP bisa 0 rupiah. All-in 2jt DIHAPUS.
 - USP: Bersebelahan Citra Maja Raya, Dekat 2 Stasiun Citeras 5 menit & Maja 7 menit Double Track, Satu-satunya di Maja ada RUKAN BHABINKAMTIBMAS
 - Akses: 17 km ke pintu tol Rangkas Bitung, Jalan Raya Maja sudah COR beton
 - Spesifikasi: Listrik 1300 watt, Air PDAM + artesis lulus lab oke, Kelimutu Batako ceiling 2.8m, Kintamani Double dinding Hebel ceiling 3.8m. Kusen aluminium -> ajakan survey
-- Boleh kanopi? Boleh kak, boleh pasang kanopi asal tidak melewati batas GSB, termasuk renovasi ringan yang diizinkan <5 tahun
+- Boleh kanopi? Boleh kak, asal tidak melewati batas GSB, termasuk renovasi ringan <5 tahun
 - Boleh renov? Boleh dengan ketentuan KPR Subsidi <5 tahun: renov ringan cat/keramik/plafon, belakang/samping bangun dapur di sisa tanah, eksterior non-permanen pagar & kanopi tidak lewat GSB, interior sekat & kitchen set
-- Banjir gak? Aman kak, lokasi tertinggi diantara perumahan lain sekitar, sudah ada Peil Banjir No. 503/1417/SDA/DPUPR/2017, dataran tinggi aman dari banjir
-- Foto/Video progress: Gerbang utama sudah jadi One Gate, rumah contoh Kintamani & Kelimutu, drone view nempel Citra Maja, Rukan Bhabinkamtibmas. Dokumentasi ada di IG https://www.instagram.com/rumahsubsidi.citeras.maja/ - jika minta foto, arahkan ke IG atau ajak survey
+- Banjir gak? Aman kak, lokasi tertinggi diantara perumahan lain sekitar, sudah ada Peil Banjir No. 503/1417/SDA/DPUPR/2017, dataran tinggi aman
+- Foto/Video: Gerbang utama One Gate, rumah contoh Kintamani & Kelimutu, drone view nempel Citra Maja, Rukan Bhabinkamtibmas. IG https://www.instagram.com/rumahsubsidi.citeras.maja/
 - Promo: Subsidi 4jt, Free BPHTB, Bunga 5% Flat, Cicilan 1jt-an
-- Ready stock Kintamani & Kelimutu, pilih unit -> HANDOVER
 
-ATURAN ANTI NGARANG: Jangan buat harga/angsuran/promo baru. Jika masuk handover atau tidak ada di knowledge -> jawab handover empatik.
+ATURAN ANTI NGARANG: Jangan buat harga/angsuran/promo baru.
 
 User tanya: ${userText}
 Knowledge: ${JSON.stringify(knowledge).substring(0, 9000)}
 `;
 
-    const res = await axios.post('https://api.openai.com/v1/chat/completions', {
-      model: "gpt-4o-mini",
-      messages: [{role: "user", content: prompt}],
-      temperature: 0.3
-    }, { headers: { Authorization: `Bearer ${OPENAI_KEY}` } });
-
-    return res.data.choices[0].message.content;
-  } catch(e) {
-    console.error(e.message);
-    return "Mohon maaf kak, koneksi lagi gangguan, tim Grand Citeras akan lanjut manual dalam 5 menit ya kak 🙏";
+  // 1. GEMINI FREE
+  if(GEMINI_KEY){
+    try{
+      const res = await axios.post(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`, {
+        contents: [{ parts: [{ text: prompt }] }]
+      });
+      const text = res.data.candidates?.[0]?.content?.parts?.[0]?.text;
+      if(text) return text;
+    }catch(e){ console.error("Gemini error", e.response?.data || e.message); }
   }
+
+  // 2. GROQ FREE
+  if(GROQ_KEY){
+    try{
+      const res = await axios.post('https://api.groq.com/openai/v1/chat/completions', {
+        model: "llama-3.1-8b-instant",
+        messages: [{role: "user", content: prompt}],
+        temperature: 0.3
+      }, { headers: { Authorization: `Bearer ${GROQ_KEY}` } });
+      const text = res.data.choices?.[0]?.message?.content;
+      if(text) return text;
+    }catch(e){ console.error("Groq error", e.response?.data || e.message); }
+  }
+
+  // 3. OPENAI
+  if(OPENAI_KEY){
+    try{
+      const res = await axios.post('https://api.openai.com/v1/chat/completions', {
+        model: "gpt-4o-mini",
+        messages: [{role: "user", content: prompt}],
+        temperature: 0.3
+      }, { headers: { Authorization: `Bearer ${OPENAI_KEY}` } });
+      return res.data.choices[0].message.content;
+    }catch(e){ console.error("OpenAI error", e.response?.data || e.message); }
+  }
+
+  // 4. FALLBACK GRATIS 100%
+  return getFreeAnswer(userText.toLowerCase());
+}
+
+function getFreeAnswer(textLower){
+  if(textLower.includes("harga") || textLower.includes("166") || textLower.includes("kintamani") || textLower.includes("kelimutu")){
+    return "Harga Kintamani 27/60 & Kelimutu 27/60 Rp 166.000.000 masih sama Okt 2026 kak 🙏 Booking Fee Rp 250.000 Non Refund untuk Kintamani & Kelimutu Subsidi, DP bisa 0 rupiah, Free BPHTB, subsidi 4jt, cicilan 1jt-an bunga 5% Flat. All-in 2jt sudah dihapus per update 17 Okt 2026 ya kak.";
+  }
+  if(textLower.includes("kanopi")) return "Boleh kak, boleh pasang kanopi asal tidak melewati batas garis sempadan bangunan / GSB kak 🙏 Ini termasuk renovasi ringan yang diizinkan di 5 tahun pertama KPR subsidi.";
+  if(textLower.includes("banjir")) return "Aman kak, Grand Citeras lokasi tertinggi diantara perumahan lain sekitar, sudah ada Peil Banjir resmi No. 503/1417/SDA/DPUPR/2017, jadi aman dari banjir kak 🙏 Lokasi di dataran tinggi.";
+  if(textLower.includes("renov")) return "Boleh renov dengan ketentuan KPR Subsidi <5 tahun kak: renov ringan cat/keramik/plafon, belakang/samping bangun dapur di sisa tanah, eksterior non-permanen pagar & kanopi tidak lewat GSB, interior sekat & kitchen set 🙏";
+  if(textLower.includes("listrik") || textLower.includes("air")) return "Listrik 1300 watt kak, Air sudah oke PDAM + artesis lulus uji lab 🙏 Untuk detail kusen biar Maria ajak kakak survey langsung lihat rumah contoh Kintamani & Kelimutu ya kak biar lebih jelas.";
+  if(textLower.includes("tol") || textLower.includes("jalan cor") || textLower.includes("akses") || textLower.includes("stasiun")) return "Akses bagus kak, 17 km ke pintu tol Rangkas Bitung, Jalan Raya Maja sudah COR beton, bersebelahan Citra Maja Raya, dekat 2 stasiun Citeras 5 menit & Maja 7 menit Double Track, KRL setiap 30 menit ke Tanah Abang 🙏";
+  if(textLower.includes("foto") || textLower.includes("video") || textLower.includes("ig") || textLower.includes("instagram")) return "Foto/video progress ada di IG Maria di @rumahsubsidi.citeras.maja ya kak 🙏 Ada gerbang utama One Gate sudah jadi, rumah contoh Kintamani & Kelimutu, drone view nempel Citra Maja, Rukan Bhabinkamtibmas. Atau biar Maria ajak survey langsung lihat rumah contoh biar lebih jelas kak.";
+  if(textLower.includes("bhabinkamtibmas") || textLower.includes("keamanan")) return "Grand Citeras satu-satunya perumahan subsidi di Maja yang ada Rukan Bhabinkamtibmas Desa Cemplang resmi di dalam kawasan kak, peresmian 9 Sept 2026 ada di IG. Jadi keamanan 24 jam + Bhabinkamtibmas + One Gate System, anak istri aman 🙏";
+  return "Untuk Kintamani & Kelimutu 27/60 harga Rp 166.000.000 masih sama Okt 2026 kak, booking fee 250rb non refund DP 0, Free BPHTB, subsidi 4jt, cicilan 1jt-an. Boleh kanopi asal tidak lewat GSB, banjir aman lokasi tertinggi Peil 503/1417, akses 17km tol Rangkas Bitung jalan sudah cor, dekat 2 stasiun Citeras 5 menit & Maja 7 menit, foto bisa cek IG @rumahsubsidi.citeras.maja ya kak 🙏";
 }
 
 async function handleHandover(wa_id, reason, lastMessage) {
   console.log(`HANDOVER ${wa_id}: ${reason}`);
-  if(leads[wa_id]) {
-    leads[wa_id].handover = true;
-    leads[wa_id].nextFollowUp = null;
-  }
+  if(leads[wa_id]) { leads[wa_id].handover = true; leads[wa_id].nextFollowUp = null; }
   const handoverMsg = "Mohon maaf kak, untuk detail ini biar Maria cek dulu ya biar akurat dan tidak salah info 🙏 Tim Grand Citeras akan lanjut manual dari nomor ini dalam 5 menit ya kak, terima kasih banyak sudah menunggu";
   await sendWA(wa_id, `Halo kak, terima kasih sudah menghubungi Grand Citeras 🙏\n\n${handoverMsg}`);
-  console.log(`🔔 HANDOVER - WA: ${wa_id} - ${reason}`);
 }
 
 async function sendWA(to, text) {
@@ -146,9 +182,7 @@ async function sendWA(to, text) {
     await axios.post(`https://graph.facebook.com/v20.0/${PHONE_ID}/messages`, {
       messaging_product: "whatsapp", to, text: { body: text }
     }, { headers: { Authorization: `Bearer ${TOKEN}` } });
-  } catch(e) {
-    console.error(e.response?.data || e.message);
-  }
+  } catch(e) { console.error(e.response?.data || e.message); }
 }
 
 cron.schedule('0 * * * *', async () => {
@@ -157,21 +191,12 @@ cron.schedule('0 * * * *', async () => {
     const lead = leads[wa_id];
     if(lead.handover || !lead.nextFollowUp || now < lead.nextFollowUp) continue;
     let txt = "";
-    if(lead.followUpCount === 1) {
-      txt = "Halo kak, terima kasih sudah hubungi Grand Citeras kemarin 🙏 Gimana kak, ada info yang masih belum jelas tentang Kintamani/Kelimutu harga 166jt booking fee 250rb non refund? Atau ada dokumen yang bingung? Maria bantu jelasin lagi ya 🙏";
-      lead.nextFollowUp = new Date(Date.now() + 3*24*60*60*1000);
-      lead.followUpCount = 2;
-    } else if(lead.followUpCount === 2) {
-      txt = "Siang kak, semoga sehat selalu 🙏 Maria cek lagi, untuk rumah subsidi 166jt cicilan 1jt-an masih ready stock Kintamani & Kelimutu, lokasi tertinggi diantara perumahan lain jadi aman banjir Peil 503/1417, boleh kanopi, dekat 2 stasiun Citeras 5 menit & Maja 7 menit, bersebelahan Citra Maja Raya, keamanan ada Bhabinkamtibmas. Foto progress bisa cek IG @rumahsubsidi.citeras.maja ya kak. Ada yang mau ditanyakan atau Maria bantu jadwalkan survei? 🙏";
-      lead.nextFollowUp = new Date(Date.now() + 2*24*60*60*1000);
-      lead.followUpCount = 3;
-    } else if(lead.followUpCount === 3) {
-      txt = "Halo kak, mohon maaf mengganggu waktunya 🙏 Ini follow-up terakhir dari Maria ya kak, slot survei Grand Citeras minggu ini tinggal 2 slot lagi. Kalau masih tertarik, ketik SURVEI ya kak, nanti tim lanjut manual. Terima kasih banyak kak 🙏";
-      lead.nextFollowUp = null;
-      lead.followUpCount = 4;
-    } else continue;
+    if(lead.followUpCount === 1) { txt = "Halo kak, terima kasih sudah hubungi Grand Citeras kemarin 🙏 Gimana kak, ada info yang masih belum jelas tentang Kintamani/Kelimutu harga 166jt booking fee 250rb non refund? Atau ada dokumen yang bingung? Maria bantu jelasin lagi ya 🙏"; lead.nextFollowUp = new Date(Date.now() + 3*24*60*60*1000); lead.followUpCount = 2; }
+    else if(lead.followUpCount === 2) { txt = "Siang kak, semoga sehat selalu 🙏 Maria cek lagi, untuk rumah subsidi 166jt cicilan 1jt-an masih ready stock Kintamani & Kelimutu, lokasi tertinggi diantara perumahan lain jadi aman banjir Peil 503/1417, boleh kanopi, dekat 2 stasiun Citeras 5 menit & Maja 7 menit, bersebelahan Citra Maja Raya, keamanan ada Bhabinkamtibmas. Foto progress bisa cek IG @rumahsubsidi.citeras.maja ya kak. Ada yang mau ditanyakan atau Maria bantu jadwalkan survei? 🙏"; lead.nextFollowUp = new Date(Date.now() + 2*24*60*60*1000); lead.followUpCount = 3; }
+    else if(lead.followUpCount === 3) { txt = "Halo kak, mohon maaf mengganggu waktunya 🙏 Ini follow-up terakhir dari Maria ya kak, slot survei Grand Citeras minggu ini tinggal 2 slot lagi. Kalau masih tertarik, ketik SURVEI ya kak, nanti tim lanjut manual. Terima kasih banyak kak 🙏"; lead.nextFollowUp = null; lead.followUpCount = 4; }
+    else continue;
     await sendWA(wa_id, txt);
   }
 });
 
-app.listen(process.env.PORT || 3000, () => console.log("Grand Citeras Bot Final - Kanopi Banjir Tertinggi IG - jalan"));
+app.listen(process.env.PORT || 3000, () => console.log("Grand Citeras Bot FINAL FREE - Gemini/Groq/Fallback - jalan"));
